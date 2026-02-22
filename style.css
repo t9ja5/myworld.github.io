@@ -1,191 +1,131 @@
-/* ==========================================
-   TEJAS NARWADE – COSMIC ML FINANCE THEME
-   ========================================== */
-
-/* ---------------- BODY ---------------- */
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Optima, -apple-system, BlinkMacSystemFont,
-                 Ubuntu, Cantarell, "Fira Sans",
-                 "Helvetica Neue", Arial, sans-serif;
-
-    background: radial-gradient(circle at 20% 20%, #111827 0%, #0b0f1a 40%, #070a12 100%);
-    color: #e6edf3;
-    line-height: 1.6;
+:root{
+  --bg:#ffffff;
+  --text:#111111;
+  --subtle:#666666;
+  --border:#e8e8e8;
+  --accent:#1a73e8;
 }
 
-/* Smooth global transitions */
-* {
-    transition: all 0.25s ease;
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0f1115;
+    --text:#e6edf3;
+    --subtle:#8b949e;
+    --border:#23262d;
+    --accent:#4ea1ff;
+  }
 }
 
-/* ---------------- MAIN LAYOUT ---------------- */
-
-div#main-container {
-    min-height: 100vh;
-    background: transparent;
+body{
+  margin:0;
+  padding:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Helvetica,Arial,sans-serif;
+  line-height:1.7;
+  font-size:16px;
 }
 
-div#layout-content {
-    max-width: 900px;
-    margin: auto;
-    padding: 40px 30px;
+div#layout-content{
+  max-width:1100px;
+  margin:60px auto;
+  padding:0 40px;
 }
 
-/* ---------------- TITLES ---------------- */
-
-div#toptitle {
-    border-bottom: 2px solid #1f2937;
-    margin-bottom: 25px;
+div#toptitle{
+  margin-bottom:30px;
 }
 
-h1 {
-    font-size: 30px;
-    margin-bottom: 5px;
-    color: #79c0ff;
+h1{
+  font-size:34px;
+  font-weight:600;
+  margin-bottom:6px;
 }
 
-h2 {
-    font-size: 22px;
-    margin-top: 35px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #1f2937;
-    padding-bottom: 5px;
-    color: #58a6ff;
+h2{
+  font-size:22px;
+  font-weight:600;
+  margin-top:50px;
+  margin-bottom:15px;
 }
 
-h3 {
-    color: #7f5af0;
+div#subtitle{
+  color:var(--subtle);
+  font-size:14px;
 }
 
-div#subtitle {
-    color: #8b949e;
-    font-size: 15px;
+a{
+  color:var(--accent);
+  text-decoration:none;
 }
 
-/* ---------------- LINKS ---------------- */
-
-a {
-    color: #58a6ff;
-    text-decoration: none;
+a:hover{
+  text-decoration:underline;
 }
 
-a:hover {
-    color: #f0b90b; /* finance gold */
+.top-menu ul{
+  list-style:none;
+  padding:0;
+  margin:40px 0 60px 0;
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
 }
 
-/* ---------------- TOP MENU ---------------- */
-
-.top-menu ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 25px;
+.top-menu li a{
+  display:inline-block;
+  padding:8px 16px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  color:var(--text);
+  font-size:14px;
 }
 
-.top-menu li a {
-    padding: 6px 14px;
-    border-radius: 8px;
-    border: 1px solid #1f6feb;
-    background: rgba(20, 30, 60, 0.8);
-    color: #e6edf3;
-    font-weight: 600;
+.top-menu li a:hover{
+  border-color:var(--accent);
+  color:var(--accent);
 }
 
-.top-menu li a:hover {
-    background: #1f6feb;
-    box-shadow: 0 0 10px rgba(31, 111, 235, 0.6);
-    color: white;
+.top-menu li a.active{
+  border-color:var(--accent);
+  background:var(--accent);
+  color:#ffffff;
 }
 
-.top-menu li a.active {
-    background: linear-gradient(90deg, #7f5af0, #1f6feb);
-    border: none;
-    color: white;
+p{
+  margin-bottom:16px;
+  max-width:820px;
 }
 
-/* ---------------- TEXT ---------------- */
-
-p {
-    font-size: 16px;
-    margin-bottom: 12px;
+ul{
+  padding-left:20px;
+  max-width:820px;
 }
 
-ul {
-    padding-left: 20px;
+li{
+  margin-bottom:6px;
 }
 
-li {
-    margin-bottom: 6px;
+img{
+  border-radius:8px;
+  max-width:200px;
 }
 
-/* ---------------- PROFILE IMAGE ---------------- */
-
-img {
-    border-radius: 12px;
-    box-shadow: 0 0 18px rgba(127, 90, 240, 0.3);
+div.infoblock > div.blockcontent{
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:16px;
+  max-width:820px;
 }
 
-/* ---------------- INFOBLOCK (QUOTE) ---------------- */
-
-div.infoblock > div.blockcontent {
-    background: linear-gradient(135deg, #161b22, #0d1117);
-    border: 1px solid #30363d;
-    border-radius: 10px;
-    padding: 15px;
-    color: #c9d1d9;
-    box-shadow: 0 0 15px rgba(127, 90, 240, 0.25);
+div#footer{
+  margin-top:80px;
+  font-size:13px;
+  color:var(--subtle);
 }
 
-/* ---------------- CODE BLOCKS ---------------- */
-
-pre, tt {
-    background: #161b22;
-    color: #c9d1d9;
-    border-radius: 6px;
-    padding: 6px 8px;
-    font-family: SFMono-Regular, Consolas, monospace;
-}
-
-/* ---------------- FOOTER ---------------- */
-
-div#footer {
-    color: #6e7681;
-    font-size: 14px;
-    padding-top: 40px;
-    text-align: center;
-}
-
-/* ---------------- TABLES ---------------- */
-
-table {
-    border-collapse: collapse;
-}
-
-td {
-    padding: 6px 8px;
-}
-
-/* ---------------- MOBILE RESPONSIVE ---------------- */
-
-@media screen and (max-width: 768px) {
-
-    div#layout-content {
-        padding: 25px 20px;
-    }
-
-    .top-menu ul {
-        justify-content: center;
-    }
-
-    img {
-        display: block;
-        margin: auto;
-    }
-
+@media screen and (max-width:900px){
+  div#layout-content{
+    padding:0 20px;
+  }
 }
