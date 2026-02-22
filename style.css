@@ -1,9 +1,191 @@
-body{
-    background-color: black;
+/* ==========================================
+   TEJAS NARWADE – COSMIC ML FINANCE THEME
+   ========================================== */
+
+/* ---------------- BODY ---------------- */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Optima, -apple-system, BlinkMacSystemFont,
+                 Ubuntu, Cantarell, "Fira Sans",
+                 "Helvetica Neue", Arial, sans-serif;
+
+    background: radial-gradient(circle at 20% 20%, #111827 0%, #0b0f1a 40%, #070a12 100%);
+    color: #e6edf3;
+    line-height: 1.6;
 }
-.header1{
-    color:white;
+
+/* Smooth global transitions */
+* {
+    transition: all 0.25s ease;
 }
-.p1{
-    color:white;
+
+/* ---------------- MAIN LAYOUT ---------------- */
+
+div#main-container {
+    min-height: 100vh;
+    background: transparent;
+}
+
+div#layout-content {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 30px;
+}
+
+/* ---------------- TITLES ---------------- */
+
+div#toptitle {
+    border-bottom: 2px solid #1f2937;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 5px;
+    color: #79c0ff;
+}
+
+h2 {
+    font-size: 22px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #1f2937;
+    padding-bottom: 5px;
+    color: #58a6ff;
+}
+
+h3 {
+    color: #7f5af0;
+}
+
+div#subtitle {
+    color: #8b949e;
+    font-size: 15px;
+}
+
+/* ---------------- LINKS ---------------- */
+
+a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f0b90b; /* finance gold */
+}
+
+/* ---------------- TOP MENU ---------------- */
+
+.top-menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.top-menu li a {
+    padding: 6px 14px;
+    border-radius: 8px;
+    border: 1px solid #1f6feb;
+    background: rgba(20, 30, 60, 0.8);
+    color: #e6edf3;
+    font-weight: 600;
+}
+
+.top-menu li a:hover {
+    background: #1f6feb;
+    box-shadow: 0 0 10px rgba(31, 111, 235, 0.6);
+    color: white;
+}
+
+.top-menu li a.active {
+    background: linear-gradient(90deg, #7f5af0, #1f6feb);
+    border: none;
+    color: white;
+}
+
+/* ---------------- TEXT ---------------- */
+
+p {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* ---------------- PROFILE IMAGE ---------------- */
+
+img {
+    border-radius: 12px;
+    box-shadow: 0 0 18px rgba(127, 90, 240, 0.3);
+}
+
+/* ---------------- INFOBLOCK (QUOTE) ---------------- */
+
+div.infoblock > div.blockcontent {
+    background: linear-gradient(135deg, #161b22, #0d1117);
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 15px;
+    color: #c9d1d9;
+    box-shadow: 0 0 15px rgba(127, 90, 240, 0.25);
+}
+
+/* ---------------- CODE BLOCKS ---------------- */
+
+pre, tt {
+    background: #161b22;
+    color: #c9d1d9;
+    border-radius: 6px;
+    padding: 6px 8px;
+    font-family: SFMono-Regular, Consolas, monospace;
+}
+
+/* ---------------- FOOTER ---------------- */
+
+div#footer {
+    color: #6e7681;
+    font-size: 14px;
+    padding-top: 40px;
+    text-align: center;
+}
+
+/* ---------------- TABLES ---------------- */
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    padding: 6px 8px;
+}
+
+/* ---------------- MOBILE RESPONSIVE ---------------- */
+
+@media screen and (max-width: 768px) {
+
+    div#layout-content {
+        padding: 25px 20px;
+    }
+
+    .top-menu ul {
+        justify-content: center;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+    }
+
 }
